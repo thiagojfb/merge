@@ -6,6 +6,7 @@ class teste{
         System.out.println(t.greet("João"));
 
         System.out.println("Sum: " + t.add(5, 7));
+        System.out.println("Division: " + t.divide(10, 2));
         System.out.println("Difference: " + t.subtract(10, 3));
         System.out.println("Product: " + t.multiply(4, 6));
     }
@@ -16,6 +17,14 @@ class teste{
 
     public int add(int a, int b) {
         return a + b;
+    }
+
+    //divisão
+    public double divide(double a, double b) {
+        if (b == 0) {
+            throw new IllegalArgumentException("Divisor cannot be zero.");
+        }
+        return a / b;
     }
 
     //subtração
